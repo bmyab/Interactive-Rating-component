@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+
+:root{
+  --Orange: hsl(25, 97%, 53%);
+  --White: hsl(0, 0%, 100%);
+  --Light-Grey: hsl(217, 12%, 63%);
+  --Medium-Grey: hsl(216, 12%, 54%);
+  --Dark-Blue: hsl(213, 19%, 18%);
+  --Very-Dark-Blue: hsl(216, 12%, 8%);
+}
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+body{
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  font-family: 'Overpass', sans-serif;
+  background-color: var(--Very-Dark-Blue);
+}
+
+.card{
+  max-width: 36rem;
+  padding: 2.5rem;
+  background-color: var(--Dark-Blue);
+  border-radius: 1.2rem;
+  color: white;
+}
+.card .title{
+  font-weight: 700;
+  color: white;
+}
+.card__rating.hide{
+  border: 1px solid red;
+  display: none;
+}
+.card.card__rating figure{
+  width: 40px;
+  height: 40px;
+  line-height: 4.8rem;
+  text-align: center;
+  background-color: var(--Very-Dark-Blue);
+  border-radius: 50%;
+}
+.card.card__rating .texts{
+  padding-block: 1.5rem;
+  color: var(--Light-Grey);
+}
+.card.card__rating .texts p{
+  padding-block: 1rem;
+  line-height: 2.5rem;
+}
+.card.card__rating .card__footer .rating{
+  display: flex;
+  justify-content: space-around;
+}
+.card.card__rating .card__footer .rating li{
+  list-style: none;
+  width: 40px;
+  height: 40px;
+  line-height: 4.5rem;
+  text-align: center;
+  background-color: var(--Very-Dark-Blue);
+  border-radius: 50%;
+  color: var(--Medium-Grey);
+  cursor: pointer;
+  transition: background 0.2s ease-in;
+}
+.card.card__rating .card__footer .rating .opc.select{
+  background-color: var(--Light-Grey);
+  color: white;
+}
+.card.card__rating .card__footer .rating li:hover{
+  background-color: var(--Orange);
+  color: var(--White);
+  font-weight: 700;
+}
+.card.card__rating .card__footer .cta{
+  width: 100%;
+  padding-block: 1.5rem;
+  margin-top: 2rem;
+  font-weight: 700;
+  background-color: var(--Orange);
+  color: var(--White);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border: none;
+  border-radius: 2.5rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in;
+}
+.card.card__rating .card__footer .cta:hover{
+  background-color: var(--White);
+  color: var(--Orange);
+}
+/* Card thanks */
+.card__thanks{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  text-align: center;
+}
+.card__thanks.hide{
+  display: none;
+}
+.card__thanks .card__header p{
+  margin-block: 1.5rem;
+  padding: 0.6rem 1.2rem;
+  border-radius: 1.5rem;
+  background-color: var(--Very-Dark-Blue);
+  color: var(--Orange);
+}
+.card__thanks .card__content p{
+  padding-block: 1.5rem;
+  color: var(--Light-Grey);
+}
